@@ -1,0 +1,125 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+D:\GPS\Embedded-Systems-Project\Project\SRC\project.uvproj
+Project File Date:  05/13/2024
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling main.c...
+../includes/GPIO.h(27): warning:  #1-D: last line of file ends without a newline
+  int is_SW2_pressed(void);
+../includes/UART.h(12): warning:  #1-D: last line of file ends without a newline
+  void uart5_receive_string(char * string, uint32_t len);
+../includes/Delay.h(8): warning:  #1-D: last line of file ends without a newline
+  void delay(int t);
+main.c(46): error:  #268: declaration may not appear after executable statement in block
+                double point1_lat = take_latitude(previous_point); 
+main.c(47): error:  #268: declaration may not appear after executable statement in block
+      double point1_lon = take_longitude(previous_point);
+main.c(50): error:  #268: declaration may not appear after executable statement in block
+      double point2_lat = take_latitude(point); 
+main.c(51): error:  #268: declaration may not appear after executable statement in block
+      double point2_lon = take_longitude(point);
+main.c(55): error:  #268: declaration may not appear after executable statement in block
+      double distance = haversine(point1_lat, point1_lon, point2_lat, point2_lon);
+main.c(20): warning:  #177-D: variable "command" was declared but never referenced
+        char command[len] = {0};
+main.c: 4 warnings, 5 errors
+compiling green led.c...
+green led.c(4): error:  #5: cannot open source input file "io.h": No such file or directory
+  #include "io.h"
+green led.c: 0 warnings, 1 error
+compiling GPS.c...
+../includes/UART.h(12): warning:  #1-D: last line of file ends without a newline
+  void uart5_receive_string(char * string, uint32_t len);
+../includes/GPIO.h(27): warning:  #1-D: last line of file ends without a newline
+  int is_SW2_pressed(void);
+GPS.c(5): warning:  #1295-D: Deprecated declaration UART0_init - give arg types
+  void UART0_init();
+GPS.c(7): warning:  #1295-D: Deprecated declaration read_UART0 - give arg types
+  char read_UART0();
+GPS.c(9): warning:  #1295-D: Deprecated declaration UART2_init - give arg types
+  void UART2_init();
+GPS.c(52): error:  #268: declaration may not appear after executable statement in block
+                double point1_lat = take_latitude(previous_point); 
+GPS.c(53): error:  #268: declaration may not appear after executable statement in block
+      double point1_lon = take_longitude(previous_point);
+GPS.c(56): error:  #268: declaration may not appear after executable statement in block
+      double point2_lat = take_latitude(point); 
+GPS.c(57): error:  #268: declaration may not appear after executable statement in block
+      double point2_lon = take_longitude(point);
+GPS.c(61): error:  #268: declaration may not appear after executable statement in block
+      double distance = haversine(point1_lat, point1_lon, point2_lat, point2_lon);
+GPS.c(26): warning:  #177-D: variable "command" was declared but never referenced
+        char command[len] = {0};
+GPS.c(85): error:  #268: declaration may not appear after executable statement in block
+        double longitude = strtod(degrees_str,NULL) + strtod(minutes_str , NULL) /60.0 ; 
+GPS.c(93): error:  #268: declaration may not appear after executable statement in block
+        char *degrees_str = "";
+GPS.c(94): error:  #268: declaration may not appear after executable statement in block
+        char *minutes_str = "";
+GPS.c(97): error:  #268: declaration may not appear after executable statement in block
+        double longitude = strtod(degrees_str,NULL) + strtod(minutes_str , NULL) /60.0 ; 
+GPS.c(119): error:  #268: declaration may not appear after executable statement in block
+      double dlat = lat2 - lat1;
+GPS.c(120): error:  #268: declaration may not appear after executable statement in block
+      double dlon = lon2 - lon1;
+GPS.c(121): error:  #268: declaration may not appear after executable statement in block
+      double a = sin(dlat / 2) * sin(dlat / 2) + cos(lat1) * cos(lat2) * sin(dlon / 2) * sin(dlon / 2);
+GPS.c(122): error:  #268: declaration may not appear after executable statement in block
+      double c = 2 * atan2(sqrt(a), sqrt(1 - a));
+GPS.c(123): error:  #268: declaration may not appear after executable statement in block
+      double distance = R * c;
+GPS.c(285): warning:  #1-D: last line of file ends without a newline
+  }
+GPS.c: 7 warnings, 14 errors
+".\project.axf" - 20 Error(s), 11 Warning(s).
+Target not created
+ executable statement in block
+      double distance = R * c;
+GPS.c(284): warning:  #1-D: last line of file ends without a newline
+  }
+GPS.c: 7 warnings, 17 errors
+".\project.axf" - 18 Error(s), 16 Warning(s).
+Target not created
+at1) * cos(lat2) * sin(dlon / 2) * sin(dlon / 2);
+GPS.c(120): error:  #268: declaration may not appear after executable statement in block
+      double c = 2 * atan2(sqrt(a), sqrt(1 - a));
+GPS.c(121): error:  #268: declaration may not appear after executable statement in block
+      double distance = R * c;
+GPS.c(283): warning:  #1-D: last line of file ends without a newline
+  }
+GPS.c: 7 warnings, 21 errors
+".\project.axf" - 22 Error(s), 16 Warning(s).
+Target not created
+not appear after executable statement in block
+      double distance = R * c;
+GPS.c(282): warning:  #1-D: last line of file ends without a newline
+  }
+GPS.c: 7 warnings, 23 errors
+".\project.axf" - 24 Error(s), 16 Warning(s).
+Target not created
+le ends without a newline
+  }
+GPS.c: 8 warnings, 23 errors
+".\project.axf" - 24 Error(s), 17 Warning(s).
+Target not created
+ longitude = strtod(degrees_str,NULL) + strtod(minutes_str , NULL) /60.0 ; 
+GPS.c(116): error:  #268: declaration may not appear after executable statement in block
+      double dlat = lat2 - lat1;
+GPS.c(117): error:  #268: declaration may not appear after executable statement in block
+      double dlon = lon2 - lon1;
+GPS.c(118): error:  #268: declaration may not appear after executable statement in block
+      double a = sin(dlat / 2) * sin(dlat / 2) + cos(lat1) * cos(lat2) * sin(dlon / 2) * sin(dlon / 2);
+GPS.c(119): error:  #268: declaration may not appear after executable statement in block
+      double c = 2 * atan2(sqrt(a), sqrt(1 - a));
+GPS.c(120): error:  #268: declaration may not appear after executable statement in block
+      double distance = R * c;
+GPS.c(282): warning:  #1-D: last line of file ends without a newline
+  }
+GPS.c: 12 warnings, 23 errors
+".\project.axf" - 24 Error(s), 25 Warning(s).
+Target not created
